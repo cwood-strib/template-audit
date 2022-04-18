@@ -3,7 +3,7 @@ const StatementType = Object.freeze({
     Extends: "extends"
 })
 
-function makeStatement(stmt, p) {
+function makeStatement(stmt) {
     let type = getStatementType(stmt);
     let path = parsePathFromStmt(stmt);
 
@@ -69,7 +69,10 @@ function normalizeTwigPath(path) {
 }
 
 function parseStatements(contents) {
-    // check contents
+    if (!contents) {
+        return [];
+    }
+
     let exp = new RegExp(/\{\%.+%\}/g);
     return Array.from(contents.matchAll(exp)).flatMap(match => match[0]);
 }
