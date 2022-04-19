@@ -21,6 +21,12 @@ From /templates/section-front/section-body.twig
 
 _Explanation_: Starting at `section-body.twig` there are two paths through the templates that include `article-related.twig`. 
 
+## Caveats
+
+This won't work for:
+1) Templates in shared directories outside the directory being processed
+2) Include paths that are dynamically generated at runtime (e.g. include where the path is a variable)
+
 ## TODO
 - [ ] Add more support for multiple folder locations for shared templates
 - [ ] Add configurable output
