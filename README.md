@@ -7,7 +7,7 @@ Given a directory of twig templates, the script will output templates that are i
 
 ### Audit
 
-Audit all templates for some templates where there is potential for multiple include paths through the graph of all templates.
+Audit all templates for the potential for some templates to be included multiple times starting at any given template.
 
 ```
 node src/index.js audit ../news-platform/themes/mobile-theme/templates/
