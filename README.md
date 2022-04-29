@@ -23,7 +23,7 @@ From /templates/section-front/section-body.twig
 }
 ```
 
-_Explanation_: Starting at `section-body.twig` there are two paths through the templates that include `article-related.twig`. 
+_Explanation_: Starting at `section-body.twig` there are two paths through the templates that include `article-related.twig`. Note that the the tool ignores any twig-level logic. So these are potential paths, note guaranteed paths.
 
 
 ### Graph
