@@ -34,6 +34,12 @@ Generates a [graphviz](https://graphviz.org/) graph starting from a given root t
 node src/index.js graph --root ../news-platform/themes/mobile-theme/templates/section-front/blog-stories.twig --twigRoot ../news-platform/themes/mobile-theme/templates
 ```
 
+## Caveats
+
+This won't work for:
+1) Templates in shared directories outside the directory being processed
+2) Include paths that are dynamically generated at runtime (e.g. include where the path is a variable)
+
 ## TODO
 - [ ] Add more support for multiple folder locations for shared templates
 - [ ] Cleanup async / fs for performance
